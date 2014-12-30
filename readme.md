@@ -1,6 +1,6 @@
 # Posting Synchronization Agent
 
-This is an agent that can be configured to search and retrieve certain postings from 3taps and then POST them to the Posting API. This agent uses later.js (<http://bunkat.github.io/later/>) to poll, on a set interval, the 3taps API and retrieve new postings. If there are any new postings, in bulk, those postings are then sent to the Posting API for storage and notifications purposes.
+This is an agent that can be configured to search and retrieve certain postings from 3taps and then POST them to the Posting API. This agent uses later.js (<http://bunkat.github.io/later/>) to poll, on a set interval, the 3taps API and retrieve new postings. If there are any new postings, in bulk, those postings are then sent to the Posting API for temporal storage and notifications.
 
 ## Getting Started
 
