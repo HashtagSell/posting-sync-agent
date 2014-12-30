@@ -41,13 +41,18 @@ Now put the following into the `local.json` configuration file:
   "logging": {
     "level": "trace"
   },
-	"models": {
+  "models": {
     "postings": {
       "polling" : {
         "location": {
           "metro": "USA-SFO"
         }
-			}
+      }
+    }
+  },
+  "services": {
+    "3taps": {
+      "apikey": "<YOUR DEVELOPMENT API KEY HERE>"
     }
   }
 }
