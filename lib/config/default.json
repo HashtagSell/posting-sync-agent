@@ -49,8 +49,10 @@
 			"strictSSL": false
 		},
 		"postings": {
-			"url": "https://localhost:4043/v1/postings",
-			"strictSSL": false
+			"maxRetryCount": 3,
+			"strictSSL": false,
+			"timeout": 10000,
+			"url": "https://localhost:4043/v1/postings"
 		}
 	}
 }
