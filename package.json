@@ -1,0 +1,39 @@
+{
+  "name": "posting-sync-agent",
+  "version": "0.1.0",
+  "description": "Agent for synchronizing posting data from 3taps to Posting API",
+  "main": "server.js",
+  "scripts": {
+    "start": "supervisor server | bunyan -o short",
+    "test": "gulp jshint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Hashtagsell/posting-sync-agent.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hashtagsell/posting-sync-agent/issues"
+  },
+  "homepage": "https://github.com/Hashtagsell/posting-sync-agent",
+  "dependencies": {
+    "async": "^0.9.0",
+    "bunyan": "^1.2.3",
+    "countdown": "^2.3.0",
+    "express": "^4.10.6",
+    "pretty-bytes": "^1.0.2",
+    "settings-lib": "0.0.5"
+  },
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "del": "^1.1.1",
+    "gulp": "^3.8.10",
+    "gulp-istanbul": "^0.5.0",
+    "gulp-jshint": "^1.9.0",
+    "gulp-mocha": "^2.0.0",
+    "jshint-stylish": "^1.0.0",
+    "run-sequence": "^1.0.2",
+    "supervisor": "^0.6.0"
+  }
+}
