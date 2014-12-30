@@ -38,9 +38,18 @@ Now put the following into the `local.json` configuration file:
 
 ```javascript
 {
-	"logging": {
-		"level": "trace"
-	}
+  "logging": {
+    "level": "trace"
+  },
+	"models": {
+    "postings": {
+      "polling" : {
+        "location": {
+          "metro": "USA-SFO"
+        }
+			}
+    }
+  }
 }
 ```
 
