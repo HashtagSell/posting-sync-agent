@@ -2,6 +2,37 @@
 	"logging": {
 		"level": "info"
 	},
+	"models": {
+		"postings": {
+			"polling" : {
+				"location": {
+					"metro": ""
+				},
+				"retvals": [
+					"annotations",
+					"body",
+					"category",
+					"category_group",
+					"currency",
+					"expires",
+					"external_id",
+					"external_url",
+					"heading",
+					"id",
+					"images",
+					"language",
+					"location",
+					"price",
+					"source",
+					"state",
+					"status",
+					"timestamp"]
+			},
+			"schedule": {
+				"interval": "every 10 secs"
+			}
+		}
+	},
 	"server": {
 		"keys": {
 			"certPath": "./init/keys/server.crt",
@@ -14,10 +45,12 @@
 	"services": {
 		"3taps": {
 			"apikey": "",
+			"maxRetryCount": 3,
 			"strictSSL": false
 		},
-		"postingAPI": {
-			
+		"postings": {
+			"url": "https://localhost:4043/v1/postings",
+			"strictSSL": false
 		}
 	}
 }
