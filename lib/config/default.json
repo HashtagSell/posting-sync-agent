@@ -6,7 +6,6 @@
 		"postings": {
 			"polling" : {
 				"location": {
-					"metro": ""
 				},
 				"retvals": [
 					"annotations",
@@ -32,7 +31,7 @@
 					"timestamp"]
 			},
 			"schedule": {
-				"interval": "every 10 secs"
+				"interval": "every 59 secs"
 			}
 		}
 	},
