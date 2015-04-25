@@ -2,14 +2,38 @@
 
 This is an agent that can be configured to search and retrieve certain postings from 3taps and then POST them to the Posting API. This agent uses later.js (<http://bunkat.github.io/later/>) to poll, on a set interval, the 3taps API and retrieve new postings. If there are any new postings, in bulk, those postings are then sent to the Posting API for temporal storage and notifications.
 
-## Getting Started
+## Docker
 
-### Dependencies
+### Environment Variables
+
+* LOGGING_LEVEL - defaults to `info`
+* MODELS_POSTINGS_POLLING_LOCATION_STATE - defaults to ``
+* SERVICES_THREETAPS_APIKEY - defaults to ``
+* SERVICES_THREETAPS_STRICTSSL - defaults to `true`
+* SERVICES_POSTINGS_STRICTSSL - defaults to `true`
+* SERVICES_POSTINGS_URL - defaults to `https://posting-api.hashtagsell.com/v1/postings`
+
+An example command to run locally:
+
+```bash
+docker run -d -p 8881:8880 \
+  -e LOGGING_LEVEL=trace \
+  -e MODELS_POSTINGS_POLLING_LOCATION_STATE=US-CA \
+  -e SERVICES_POSTINGS_STRICTSSL=false \
+  -e SERVICES_POSTINGS_URL="https://localhost:4043/v1/postings" \
+  -e SERVICES_THREETAPS_STRICTSSL=false \
+  -e SERVICES_THREETAPS_APIKEY=8b90c4417b0d9ba769e39432f1bff525 \
+  hashtagsell/posting-sync-agent:latest
+```
+
+## Development
+
+### Prerequisites
 
 * Node v0.10
 * Interwebs Access (to access the 3taps API)
 
-### Get Code
+### Getting Started
 
 To clone the repository and install dependencies, please perform the following:
 
@@ -25,7 +49,7 @@ For convenience you may find it useful to install `gulp` globally as well:
 sudo npm install -g gulp
 ```
 
-### Configuration
+### Local Configuration
 
 The server utilizes a mechanism for allowing configuration overrides by environment. To make use of this for a local environment, create a `local.json` configuration file in a new folder named `config` at the root of the application. The `.gitignore` has an entry to ignore this folder so that the local config won't trash other environment configurations.
 
@@ -58,9 +82,7 @@ Now put the following into the `local.json` configuration file:
 }
 ```
 
-### Start It Up
-
-#### Status
+### Run It
 
 After starting the agent, an API is exposed that provides insight into current processing status. An environment configuration should be specified (see above for details on creating a `local.json` environment config). To specify the environment, use the `NODE_ENV` environment variable in the console to begin the process. The `npm start` script uses supervisor and pipes the output to Bunyan for logging:
 
@@ -68,7 +90,7 @@ After starting the agent, an API is exposed that provides insight into current p
 NODE_ENV=local npm start
 ```
 
-### Development
+### General Development Notes
 
 As changes are saved to .js files in the project, supervisor will automatically restart the server. It may be useful to periodically check the terminal to make sure a runtime unhandled exception isn't stopping the server. Additionally, using jshint may help to uncover potential problems before running code. The `npm test` script is connected to `gulp jshint` to help with this.
 

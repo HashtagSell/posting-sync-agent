@@ -49,13 +49,13 @@
 		"3taps": {
 			"apikey": "",
 			"maxRetryCount": 3,
-			"strictSSL": false
+			"strictSSL": true
 		},
 		"postings": {
 			"maxRetryCount": 3,
 			"strictSSL": true,
 			"timeout": 10000,
-			"url": "https://develop-posting-api.hashtagsell.com/v1/postings"
+			"url": "https://posting-api.hashtagsell.com/v1/postings"
 		}
 	}
 }
