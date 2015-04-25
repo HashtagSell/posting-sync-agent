@@ -6,7 +6,7 @@
 		"postings": {
 			"polling" : {
 				"location": {
-					"metro": ""
+					"state": ""
 				},
 				"retvals": [
 					"annotations",
@@ -32,7 +32,7 @@
 					"timestamp"]
 			},
 			"schedule": {
-				"interval": "every 10 secs"
+				"interval": "every 59 secs"
 			}
 		}
 	},
@@ -42,7 +42,7 @@
 			"keyPath": "./init/keys/server.key"
 		},
 		"host": "0.0.0.0",
-		"port": 8881,
+		"port": 8880,
 		"secure": false
 	},
 	"services": {
@@ -53,9 +53,9 @@
 		},
 		"postings": {
 			"maxRetryCount": 3,
-			"strictSSL": false,
+			"strictSSL": true,
 			"timeout": 10000,
-			"url": "https://localhost:4043/v1/postings"
+			"url": "https://develop-posting-api.hashtagsell.com/v1/postings"
 		}
 	}
 }
