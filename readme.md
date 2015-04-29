@@ -8,6 +8,7 @@ This is an agent that can be configured to search and retrieve certain postings 
 
 * ENVIRONMENT - defaults to `develop`
 * LOGGING_LEVEL - defaults to `info`
+* MODELS_POSTINGS_POLLING_LOCATION_METRO - defaults to ``
 * MODELS_POSTINGS_POLLING_LOCATION_STATE - defaults to ``
 * SERVICES_THREETAPS_APIKEY - defaults to ``
 * SERVICES_THREETAPS_STRICTSSL - defaults to `true`
