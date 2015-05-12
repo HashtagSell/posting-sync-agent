@@ -11,3 +11,4 @@ readme.md
 ./init
 ./node_modules
 ./reports
+./test
