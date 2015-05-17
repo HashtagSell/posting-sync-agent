@@ -54,6 +54,7 @@
 			"strictSSL": true
 		},
 		"postings": {
+			"maxBulkUpsertCount": 25,
 			"maxRetryCount": 3,
 			"strictSSL": true,
 			"timeout": 10000,
