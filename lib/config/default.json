@@ -6,6 +6,7 @@
 	"models": {
 		"postings": {
 			"polling" : {
+				"category_group": "~PPPP|~MMMM",
 				"location": {
 					"metro": "",
 					"state": ""
