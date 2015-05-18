@@ -34,7 +34,7 @@
 					"timestamp"]
 			},
 			"schedule": {
-				"interval": "every 59 secs"
+				"interval": "every 30 secs"
 			}
 		}
 	},
@@ -54,7 +54,7 @@
 			"strictSSL": true
 		},
 		"postings": {
-			"maxBulkUpsertCount": 25,
+			"maxBulkUpsertCount": 100,
 			"maxRetryCount": 3,
 			"strictSSL": true,
 			"timeout": 10000,
