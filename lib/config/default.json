@@ -58,7 +58,7 @@
 			"maxBulkUpsertCount": 50,
 			"maxRetryCount": 3,
 			"strictSSL": true,
-			"timeout": 30000,
+			"timeout": 90000,
 			"url": "https://posting-api.hashtagsell.com/v1/postings"
 		}
 	}
